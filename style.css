@@ -107,7 +107,6 @@ body {
     transform: translateX(300%);
     transition: transform 300ms ease, opacity 300ms ease, visibility 300ms;
 }
-
 .btn__menu--close {
     position: absolute;
     top: 24px;
@@ -187,7 +186,7 @@ li {
     padding: 8px 12px;
 }
 .nav_link--anchor-primary {
-    background-color: #6030b1;
+    background-color: #6415ff;
     padding: 8px 20px;
     border-radius: 50px;
     color: #fff;
@@ -203,7 +202,7 @@ li {
 
 header .row {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: space-between;
 }
 .header__description h1 {
@@ -233,23 +232,28 @@ header .row {
 }
 
 .header__email--input {
+    position: static;
     flex: 1 1 auto;
     border: 0;
     outline: none;
     right: 5px;
     top: 5px;
+    padding: 16px 0;
     bottom: 5px;
+    width: 100%;
     min-height: 140px;
     background: transparent;
     font-weight:500;
     font-size: 16px;
     color: #555;
+    max-width: 200px;
 }
 .header__email--input::placeholder{ 
     color:#a0aec0; 
 }
 .header__email--btn {
-  position: absolute;                  /* key: anchor inside the wrapper */
+  position: absolute;  
+  z-index: 2;                /* key: anchor inside the wrapper */
   right: 6px;
   top: 6px;
   bottom: 6px;
@@ -282,24 +286,25 @@ header .row {
     0 10px 20px rgba(0,0,0,.06),
     0 0 0 6px rgba(100, 21, 255, .08);
 }
-
 .header__customers--title {
     margin-top: 80px;
-    color: #a0aec0;
+    color: #b0bac6;
     font-size: 12px;
     font-weight: 700;
     letter-spacing: 0.6;
     display: flex;
-    flex-direction: column;
 }
 .header__customers {
     max-width: 1005px;
     margin-top: 16px;
     opacity: 0.5;
+    padding-right: 64px;
 }
 
 .header__img--wrapper {
     width: calc(100%-50%);
+    display: flex;
+    justify-content: flex-end;
   }
 /* MAIN */
 /* Features */
@@ -1216,7 +1221,10 @@ footer {
     text-align: center;
   }
   .header__description {
-    max-width: none; }
+     text-align: center;
+     display: flex;
+     flex-direction: column;
+     align-items: center }
   .header__email {
     max-width: 100%;
     height: 56px;
