@@ -199,7 +199,9 @@ li {
     text-decoration: underline;
 }
 /* Header */
-
+header {
+  padding: 0 32px;
+}
 header .row {
     display: flex;
     align-items: flex-end;
@@ -216,6 +218,10 @@ header .row {
     color: #555;
     line-height: 1.5;
 }
+.header__description,
+  .header__img--wrapper {
+    width: 100%;
+  }
 .header__email{
   position: relative;                 /* the button anchor*/
   display: flex;
@@ -241,12 +247,13 @@ header .row {
     padding: 16px 0;
     bottom: 5px;
     width: 100%;
-    min-height: 140px;
+    min-width: 0;
+    height: 100%;
     background: transparent;
     font-weight:500;
     font-size: 16px;
     color: #555;
-    max-width: 200px;
+    max-width: 150px;
 }
 .header__email--input::placeholder{ 
     color:#a0aec0; 
@@ -255,13 +262,15 @@ header .row {
   position: absolute;  
   z-index: 2;                /* key: anchor inside the wrapper */
   right: 6px;
+  margin: 0;
   top: 6px;
   bottom: 6px;
-  min-width: 150px;
+  width: auto;
+  min-width: 108px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  padding: 0 24px;
+  padding: 0 16px;
   border: 0;
   border-radius: 9999px;
   font-weight: 700;
@@ -295,16 +304,19 @@ header .row {
     display: flex;
 }
 .header__customers {
-    max-width: 1005px;
+    max-width: 100%;
     margin-top: 16px;
     opacity: 0.5;
     padding-right: 64px;
 }
 
 .header__img--wrapper {
-    width: calc(100%-50%);
+    width: 60%;
     display: flex;
     justify-content: flex-end;
+  }
+  .header__description {
+    width: 40%;
   }
 /* MAIN */
 /* Features */
@@ -1224,7 +1236,9 @@ footer {
      text-align: center;
      display: flex;
      flex-direction: column;
-     align-items: center }
+     align-items: center; 
+     margin-left:16px;}
+
   .header__email {
     max-width: 100%;
     height: 56px;
