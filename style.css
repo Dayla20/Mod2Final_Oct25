@@ -185,12 +185,12 @@ li {
     font-weight: 700;
     padding: 8px 12px;
 }
-.nav_link--anchor-primary {
-    background-color: #6415ff;
+.nav_link--anchor--primary {
+    background-color: #6030b1;
     padding: 8px 20px;
     border-radius: 50px;
     color: #fff;
-    transition: background-color #5d3eff 300ms ease;
+    transition: background-color 300ms ease;
 }
 .nav_link--anchor-primary:hover {
     background-color: #5d3eff;
@@ -260,7 +260,7 @@ header .row {
 }
 .header__email--btn {
   position: absolute;  
-  z-index: 2;                /* key: anchor inside the wrapper */
+  z-index: 2;       /* key: anchor inside the wrapper */
   right: 6px;
   margin: 0;
   top: 6px;
@@ -283,14 +283,14 @@ header .row {
 }
 .header__email--btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 16px 30px -6px rgba(100, 21, 255, .35);
+  box-shadow: 0 16px 30px -6px rgba(100, 21, 255,.35);
 }
 .header__email--btn:active {
   transform: translateY(0);
-  opacity: .95;
+  opacity:.95;
 }
 .header__email:focus-within {
-  border-color: #c4b5fd;          /* light lavender */
+  border-color: #c4b5fd;    /* light lavender */
   box-shadow:
     0 10px 20px rgba(0,0,0,.06),
     0 0 0 6px rgba(100, 21, 255, .08);
@@ -458,34 +458,27 @@ header .row {
 /* === Right Side (IMAGE + GRID) === */
 .quality__img--wrapper {
     position: relative;
-    flex: 1 1 50%;
     display: flex;
     justify-content: flex-end;
-    align-items: center;
     isolation: isolate; /* keeps grid behind the image */
-    padding-right: 20px; /* subtle visual spacing like example */
+    padding-right: 60px; /* subtle visual spacing like example */
+    padding-bottom: 60px; /* subtle visual spacing like example */
 }
 
 .quality__img {
+    position: relative;
     width: 100%; /* scale as the example */
     max-width: 560px;
-    height: auto;
-    border-radius: 12px;
-    box-shadow: 0 10px 30px rgba(36, 62, 99, 0.15);
-    position: relative;
     z-index: 1; /* above grid */
 }
-
 /* === Purple dot grid behind image === */
 .quality__grid {
-    transform: translateX(50%) translateY(50%) scaleX(1) scaleY(1);
-    width: 80px;
-    height: 80px;
     position: absolute;
+    width: 120px;
+    height: 120px;
     right: 0px;  /* placement behind bottom-right corner */
     bottom: 0px;
-    z-index: 0;    /* behind the image */
-    color: #4b08d2;
+    z-index: 0;    /* Put the gridbehind the image */
     fill: rgb(69, 13, 181);
 }
 
@@ -526,8 +519,8 @@ header .row {
     height: 110px;
     z-index: 1; /* behind image */
     opacity: 0.8;
-    color: #360a8d;
-    fill: rgb(69, 13, 181);
+    color: #4f0ed0;
+    fill: rgb(94, 34, 213);
 }
 
 .steps__description {
@@ -585,7 +578,6 @@ header .row {
   gap: 48px;
   max-width: 1200px;
   margin: 0 auto;
- 
 }
 
 .values__description,
@@ -1259,13 +1251,18 @@ footer {
     right: 6px; }
 }
 @media (max-width: 640px) {
-   .header__email--btn {
-     width: 100%;
-     padding: 16px 0;
-     margin: 16px 0;
-     margin-bottom: 0px;
-     line-height: 1.5;
-    }
+  .header__email {
+    height: 52px;
+    padding: 5px 5px 5px 14px;
+  }
+
+  .header__email--btn {
+    position: static;
+    min-width: 108px;
+    height: 100%;
+    margin: 0;
+    padding: 0 12px;
+  }
 }
 /* --- FEATURES (3 → 2 → 1 columns) --- */
 .features { gap: 32px; }
